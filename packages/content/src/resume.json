@@ -1,0 +1,31 @@
+{
+  "name": "Sean P. Callahan",
+  "title": "VP Eng / Principal Engineer",
+  "tagline": "Principal engineer building company-wide platforms, regulated fintech, and AI-native systems — from YC startups to Fortune-scale cloud. Illinois-built. AI as force multiplier.",
+  "location": "Chicago, Illinois",
+  "contact": {
+    "email": "sean@3ninjallc.com",
+    "phone": "312.351.5323",
+    "linkedin": "https://www.linkedin.com/in/seanpatrickcallahan/"
+  },
+  "education": {
+    "school": "Illinois Institute of Technology",
+    "degree": "B.S. Computer Science",
+    "years": "2003–2007"
+  },
+  "highlights": [
+    "Principal Engineer L6 at Wex — company-wide MFE platform, AI agent workflows, 300+ Spark demo",
+    "Railbird (Y Combinator) Head of Engineering — $60M+ exit to DraftKings",
+    "Staff Engineer at Paro.io — Bedrock AI architecture, vector pipelines, DevOps modernization",
+    "Taught Web 2.0 at Northwestern University",
+    "300+ engineers trained across in-person and virtual sessions"
+  ],
+  "skills": [
+    "Microfrontends / Module Federation",
+    "Kubernetes / Helm / Argo",
+    "AI Agents / AWS Bedrock",
+    "TypeScript / Node / React / SvelteKit",
+    "Design Systems / WCAG 2.2",
+    "Terraform / GitHub Actions"
+  ]
+}

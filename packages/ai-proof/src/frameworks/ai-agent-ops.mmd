@@ -1,0 +1,8 @@
+flowchart TD
+  Ticket --> Planner
+  Planner --> Tools[MCP / APIs]
+  Planner --> RAG[Knowledge Base]
+  Tools --> Draft[Proposed Fix]
+  Draft --> Review{Human Review}
+  Review -->|Approved| Deploy
+  Review -->|Rejected| Planner

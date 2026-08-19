@@ -1,0 +1,60 @@
+---
+description: Prefer subagents in Auto mode; delegate in parallel with the right specialist
+alwaysApply: true
+---
+
+# Subagent-First in Auto Mode
+
+In Auto mode, default to the Task tool (subagents) instead of doing broad or multi-step work inline. Stay in the main thread only for trivial, single-step, or user-facing coordination.
+
+## When to delegate (default yes)
+
+- Codebase exploration, "where/how does X work?", architecture surveys
+- Multi-file search, refactors, or changes spanning unrelated areas
+- Shell/git/CI work that can run while you plan or edit
+- Independent subtasks (research + implement + test in parallel)
+- Any task that would burn main-thread context on tool noise
+
+## When to stay inline (exceptions)
+
+- One known file, one grep, one read, one small edit
+- User asked a direct question answerable from already-loaded context
+- Synthesizing subagent results or writing the final user response
+- Subagent would take longer than doing the step directly (under ~30s of work)
+
+## Pick the right subagent
+
+| Type | Use for |
+|------|---------|
+| `explore` | Fast codebase discovery; unknown layout; "find all usages" |
+| `generalPurpose` | Multi-step implementation, research + edits, complex fixes |
+| `shell` | Git, builds, installs, scripts, terminal-only workflows |
+| `ci-investigator` | One failing PR check: root cause + fix path |
+| `cursor-guide` | Cursor product behavior (IDE, CLI, Cloud Agents, hooks) |
+| `best-of-n-runner` | Isolated parallel experiments / competing approaches |
+
+Use `model: inherit` unless the user names a specific model.
+
+## Efficiency rules (non-negotiable)
+
+1. **Parallelize by default** — If subtasks do not depend on each other, launch multiple Task calls in one message (same turn), not sequentially.
+2. **One subagent, one outcome** — Each prompt must state exactly what to return; avoid open-ended "figure everything out."
+3. **Right-size the agent** — Prefer `explore` for search; don't use `generalPurpose` for pure discovery or `shell` for code reading.
+4. **Background long work** — Set `run_in_background: true` when the parent can keep working; `resume` when results are needed.
+5. **Don't nest delegation** — Subagents cannot spawn subagents; split work from the parent in parallel instead.
+6. **Batch tool-style work** — Prefer one explore agent with a file list/patterns over many tiny agents.
+7. **Trust and synthesize** — Don't re-run the same exploration; merge subagent outputs into one concise answer.
+
+## Prompt template for each Task call
+
+- **Goal** (1 sentence)
+- **Scope** (paths, patterns, constraints)
+- **Return format** (bullet list, file paths, root cause, diff plan)
+- **Out of scope** (what not to change)
+
+## Anti-patterns
+
+- Serial Task calls when parallel was possible
+- Parent re-reading the whole repo after an explore agent already did
+- Delegating the entire user message and pasting raw subagent dump with no synthesis
+- Using subagents for a single `Read`/`Grep` on a path the user already gave

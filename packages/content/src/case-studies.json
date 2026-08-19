@@ -1,0 +1,68 @@
+[
+  {
+    "id": "wex",
+    "title": "Wex",
+    "role": "Principal Engineer (L6)",
+    "period": "2025–Present",
+    "summary": "Company-wide next-gen web platform with microfrontends, internal admin portal generator, and AI agent workflows for production support.",
+    "metrics": ["300+ in-person Spark demo", "Admin portals in under 10 minutes", "300+ engineers trained"],
+    "tech": ["React", "Module Federation", "Kubernetes", "Helm", "Argo", "TypeScript"],
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80&auto=format&fit=crop"
+  },
+  {
+    "id": "railbird",
+    "title": "Railbird (Y Combinator)",
+    "role": "Head of Engineering",
+    "period": "2022–2023",
+    "summary": "Built a regulated event prediction futures exchange. Led architecture, hiring, CFTC demonstrations, and SOC2 compliance through a $60M+ DraftKings acquisition.",
+    "metrics": ["$4.5M raised", "$60M+ exit to DraftKings", "CFTC demo success"],
+    "tech": ["TypeScript", "SvelteKit", "Golang", "Kubernetes", "Kafka", "Terraform"],
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&auto=format&fit=crop"
+  },
+  {
+    "id": "paro",
+    "title": "Paro.io",
+    "role": "Staff Engineer",
+    "period": "2024",
+    "summary": "Financial marketplace overhaul with Bedrock AI architecture, vector DB pipelines, and DevOps modernization across 15+ properties.",
+    "metrics": ["15+ fullstack sites", "100+ pipeline overhauls"],
+    "tech": ["AWS Bedrock", "Lambda", "DynamoDB", "GraphQL", "Vector DBs"],
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop"
+  },
+  {
+    "id": "foodboss",
+    "title": "FoodBoss",
+    "role": "Head of Engineering",
+    "period": "2019–2021",
+    "summary": "Kayak for food delivery — led AWS migration, CI/CD, and performance optimization.",
+    "metrics": ["42s → 2.5s load time", "50+ high-impact projects"],
+    "tech": ["AWS ECS", "Fargate", "React Native", "Redis"],
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80&auto=format&fit=crop"
+  },
+  {
+    "id": "qchange",
+    "title": "qChange",
+    "role": "Head of Engineering",
+    "period": "2021–2022",
+    "summary": "Rebuilt behavioral AI platform from scratch with ML pipelines and SOC2 compliance.",
+    "metrics": ["SOC2 audit passed", "Microservices from greenfield"],
+    "tech": ["AWS", "Svelte", "Airflow", "Machine Learning"],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&auto=format&fit=crop"
+  },
+  {
+    "id": "cameo",
+    "title": "Early-Stage Scale",
+    "role": "Senior Software Engineer",
+    "period": "2018–2019",
+    "summary": "Early engineering hire at a hypergrowth consumer startup — standards, security hardening, and platform scale.",
+    "metrics": ["Hypergrowth platform era", "Engineering standards introduced"],
+    "tech": ["Node.js", "MongoDB", "React", "AWS"],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80&auto=format&fit=crop"
+  }
+]

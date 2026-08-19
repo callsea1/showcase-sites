@@ -1,0 +1,14 @@
+[
+  {
+    "id": "ai-delivery-loop",
+    "title": "AI-amplified delivery loop",
+    "steps": [
+      { "id": "frame", "label": "Frame", "detail": "Clarify problem, constraints, and success metrics before any model call." },
+      { "id": "architect", "label": "Architect", "detail": "Choose patterns: agents, RAG, routing, human-in-the-loop gates." },
+      { "id": "implement", "label": "Implement", "detail": "Generate options with AI; engineer selects, edits, and integrates." },
+      { "id": "evaluate", "label": "Evaluate", "detail": "Regression tests, eval harnesses, accessibility and security checks." },
+      { "id": "deploy", "label": "Deploy", "detail": "CI/CD, feature flags, rollback paths, observability from day one." },
+      { "id": "operate", "label": "Operate", "detail": "Traces, cost meters, failure alerts, continuous improvement." }
+    ]
+  }
+]

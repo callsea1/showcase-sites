@@ -1,0 +1,64 @@
+{
+  "images": [
+    {
+      "id": "chicago-skyline",
+      "url": "https://images.unsplash.com/photo-1478821666625-58124673a113",
+      "source": "Unsplash",
+      "license": "Unsplash License",
+      "usage": "Chicago location flash, hero imagery"
+    },
+    {
+      "id": "nyc-skyline",
+      "url": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9",
+      "source": "Unsplash",
+      "license": "Unsplash License",
+      "usage": "Railbird exit / trophy zone"
+    },
+    {
+      "id": "bend-mountains",
+      "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      "source": "Unsplash",
+      "license": "Unsplash License",
+      "usage": "Wex / Bend OR desk zone"
+    },
+    {
+      "id": "sf-golden-gate",
+      "url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+      "source": "Unsplash",
+      "license": "Unsplash License",
+      "usage": "YC / Railbird whiteboard zone"
+    },
+    {
+      "id": "wex-office",
+      "url": "https://images.unsplash.com/photo-1497366216548-37526070297c",
+      "source": "Unsplash",
+      "license": "Unsplash License",
+      "usage": "Wex case study card"
+    },
+    {
+      "id": "railbird-markets",
+      "url": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+      "source": "Unsplash",
+      "license": "Unsplash License",
+      "usage": "Railbird case study card"
+    },
+    {
+      "id": "paro-analytics",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      "source": "Unsplash",
+      "license": "Unsplash License",
+      "usage": "Paro case study card"
+    },
+    {
+      "id": "cloud-earth",
+      "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      "source": "Unsplash",
+      "license": "Unsplash License",
+      "usage": "3 Ninja hero + global conference zone"
+    }
+  ],
+  "sprites": [
+    { "path": "/sprites/ninja.svg", "license": "Original", "author": "3 Ninja LLC" },
+    { "path": "/sprites/coin.svg", "license": "Original", "author": "3 Ninja LLC" }
+  ]
+}

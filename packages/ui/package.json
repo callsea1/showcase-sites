@@ -1,0 +1,14 @@
+{
+  "name": "@showcase/ui",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "svelte": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles/base.css": "./src/styles/base.css"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  }
+}

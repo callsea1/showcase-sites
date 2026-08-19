@@ -1,0 +1,53 @@
+{
+  "disclaimer": "These diagrams describe architectural frameworks and patterns aligned with my experience. They are not copies of any employer's internal documentation, network maps, or proprietary implementations.",
+  "tiers": {
+    "resume-backed": "Directly supported by public resume experience",
+    "framework": "Representative pattern inspired by production work; details anonymized",
+    "demonstration": "Portfolio simulation for education",
+    "concept": "Illustrative future capability"
+  },
+  "entries": [
+    {
+      "id": "mfe-platform",
+      "tier": "framework",
+      "title": "Company-wide microfrontend platform",
+      "resumeAnchor": "Wex Principal L6 — MFE platform, admin portals in under 10 minutes"
+    },
+    {
+      "id": "ai-agent-ops",
+      "tier": "framework",
+      "title": "AI agent workflow for production support",
+      "resumeAnchor": "Wex/NORC AI agent workflows"
+    },
+    {
+      "id": "bedrock-rag",
+      "tier": "framework",
+      "title": "Bedrock + vector retrieval pipeline",
+      "resumeAnchor": "Paro Bedrock, vector DBs, MLOps"
+    },
+    {
+      "id": "cftc-exchange",
+      "tier": "framework",
+      "title": "Regulated exchange architecture (generic)",
+      "resumeAnchor": "Railbird HoE, CFTC demos, SOC2"
+    },
+    {
+      "id": "scale-path",
+      "tier": "framework",
+      "title": "High-traffic web scale path",
+      "resumeAnchor": "Wex MFE platform — company-wide scale path"
+    },
+    {
+      "id": "deploy-pipeline",
+      "tier": "framework",
+      "title": "CI/CD to Kubernetes",
+      "resumeAnchor": "GitHub Actions, Helm, Argo across roles"
+    },
+    {
+      "id": "cost-aware-ai",
+      "tier": "framework",
+      "title": "Cost-aware model routing",
+      "resumeAnchor": "AI engineering best practices"
+    }
+  ]
+}

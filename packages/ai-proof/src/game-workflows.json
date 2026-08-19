@@ -1,0 +1,14 @@
+[
+  {
+    "id": "ai-dojo",
+    "title": "The AI Dojo loop",
+    "steps": [
+      "Frame the problem and constraints",
+      "Select tools, retrieval, and model",
+      "Require reviewer approval",
+      "Evaluate quality, safety, and cost",
+      "Observe and improve the workflow"
+    ],
+    "evidenceTier": "demonstration"
+  }
+]

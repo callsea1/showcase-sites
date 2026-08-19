@@ -1,0 +1,13 @@
+{
+  "name": "@showcase/ai-proof",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./workflows": "./src/workflows.json",
+    "./evidence": "./src/evidence.json",
+    "./toolchain": "./src/toolchain.json",
+    "./frameworks": "./src/frameworks/index.ts"
+  }
+}

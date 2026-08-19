@@ -1,0 +1,8 @@
+flowchart LR
+  User --> Shell[Shell App]
+  Shell --> RemoteA[MFE Remote A]
+  Shell --> RemoteB[MFE Remote B]
+  Shell --> DS[Design System]
+  RemoteA --> API[Platform APIs]
+  RemoteB --> API
+  Shell --> K8s[Kubernetes / Argo]

@@ -1,0 +1,45 @@
+name: Deploy Company Site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/company/**'
+      - 'packages/**'
+      - '.github/workflows/deploy-company.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-company
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:company
+
+      - name: Deploy to callsea1/3ninjallc.com
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GH_PAGES_TOKEN }}
+          repository-name: callsea1/3ninjallc.com
+          branch: gh-pages
+          folder: apps/company/build
+          clean: true
+          single-commit: true

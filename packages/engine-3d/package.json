@@ -1,0 +1,14 @@
+{
+  "name": "@showcase/engine-3d",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "svelte": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0",
+    "three": "^0.180.0"
+  }
+}

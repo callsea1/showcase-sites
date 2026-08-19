@@ -1,0 +1,99 @@
+[
+  {
+    "id": "desk",
+    "name": "Executive Desk",
+    "position": [0, 0, 2],
+    "title": "Principal Engineer @ Wex",
+    "body": "Leading company-wide next-gen web platform with microfrontends, Kubernetes deployment, and AI agent workflows for production support and development.",
+    "tags": ["Module Federation", "Helm", "Argo", "AI Agents"],
+    "scenery": {
+      "city": "Bend",
+      "region": "Oregon",
+      "workplace": "Wex · Principal Engineer",
+      "skyline": "bend",
+      "colors": ["#1a2f4a", "#c45c26", "#2d5016"],
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80&auto=format&fit=crop"
+    }
+  },
+  {
+    "id": "window",
+    "name": "Window Wall",
+    "position": [0, 1.5, -4],
+    "title": "Chicago → Global",
+    "body": "Built in Illinois. Scaled from Midwest startups to Fortune-scale platforms. IIT CS grad teaching at Northwestern — engineering with Midwestern rigor and startup velocity.",
+    "tags": ["Chicago", "Illinois", "IIT", "Northwestern"],
+    "scenery": {
+      "city": "Chicago",
+      "region": "Illinois",
+      "workplace": "Grant Park · Lake Michigan",
+      "skyline": "chicago",
+      "colors": ["#234d66", "#4a90a4", "#2d6a4f"],
+      "image": "https://images.unsplash.com/photo-1478821666625-58124673a113?w=1400&q=80&auto=format&fit=crop"
+    }
+  },
+  {
+    "id": "whiteboard",
+    "name": "Architecture Whiteboard",
+    "position": [-3, 1.2, 0],
+    "title": "AI Command Center",
+    "body": "Problem framing → architecture → agent/tool selection → implementation → evaluation → deployment → observability. AI as engineering force multiplier, not magic.",
+    "tags": ["AI Agents", "Bedrock", "MCP", "Evals"],
+    "frameworkIds": ["mfe-platform", "ai-agent-ops", "bedrock-rag", "cost-aware-ai"],
+    "scenery": {
+      "city": "San Francisco",
+      "region": "California",
+      "workplace": "Y Combinator · Railbird",
+      "skyline": "sf",
+      "colors": ["#3d5a80", "#ee6c4d", "#f4a261"],
+      "image": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1400&q=80&auto=format&fit=crop"
+    }
+  },
+  {
+    "id": "trophy",
+    "name": "Trophy Shelf",
+    "position": [3, 1, -1],
+    "title": "Proof Points",
+    "body": "Railbird YC exit $60M+ to DraftKings. Wex Principal L6 — company-wide platform and 300+ Spark demo. CFTC-regulated exchange architecture. Key Contributor Awards at AT&T.",
+    "tags": ["Y Combinator", "DraftKings", "Wex", "CFTC"],
+    "scenery": {
+      "city": "New York",
+      "region": "New York",
+      "workplace": "Railbird · DraftKings Exit",
+      "skyline": "nyc",
+      "colors": ["#1d1d2e", "#ffd166", "#ef476f"],
+      "image": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=1400&q=80&auto=format&fit=crop"
+    }
+  },
+  {
+    "id": "bookshelf",
+    "name": "Bookshelf",
+    "position": [-3, 0.8, 2],
+    "title": "Resume & Teaching",
+    "body": "B.S. Computer Science, Illinois Institute of Technology. Taught Web 2.0 at Northwestern. Breakthrough Robotics Lego League coach — 3rd place from unranked.",
+    "tags": ["IIT", "Northwestern", "Teaching", "Mentoring"],
+    "scenery": {
+      "city": "Chicago",
+      "region": "Illinois",
+      "workplace": "IIT · Northwestern",
+      "skyline": "chicago",
+      "colors": ["#03049c", "#9ecbff", "#1a1a1a"],
+      "image": "https://images.unsplash.com/photo-1531243269054-5d140832d9f3?w=1400&q=80&auto=format&fit=crop"
+    }
+  },
+  {
+    "id": "conference",
+    "name": "Conference Table",
+    "position": [2, 0, 0],
+    "title": "Leadership & Training",
+    "body": "Trained 300+ engineers worldwide. Scrum Master. Public speaking, stakeholder workshops, and architecture reviews with executives and product teams.",
+    "tags": ["300+ trained", "Scrum Master", "Public Speaking"],
+    "scenery": {
+      "city": "Global",
+      "region": "Remote · 300+ Engineers",
+      "workplace": "Wex Spark · Workshops · Worldwide",
+      "skyline": "global",
+      "colors": ["#0f0f23", "#03049c", "#5dff95"],
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400&q=80&auto=format&fit=crop"
+    }
+  }
+]

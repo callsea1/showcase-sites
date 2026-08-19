@@ -1,0 +1,8 @@
+[
+  { "label": "YC Exit", "value": 60, "suffix": "M+", "prefix": "$", "description": "Railbird → DraftKings" },
+  { "label": "Portal Build", "value": 10, "suffix": " min", "prefix": "<", "description": "Wex admin portals" },
+  { "label": "Engineers Trained", "value": 300, "suffix": "+", "description": "Spark · workshops · global" },
+  { "label": "Load Time Cut", "value": 94, "suffix": "%", "description": "FoodBoss 42s → 2.5s" },
+  { "label": "Sites Migrated", "value": 25, "suffix": "+", "description": "PHP → AWS · Paro" },
+  { "label": "Illinois Roots", "value": 1, "suffix": "", "description": "IIT → Chicago → Global" }
+]

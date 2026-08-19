@@ -1,0 +1,6 @@
+{
+  "models": ["Claude", "GPT", "Amazon Bedrock", "LLaMa"],
+  "platforms": ["AWS", "Kubernetes", "GitHub Actions", "Terraform"],
+  "patterns": ["Multi-agent orchestration", "RAG / Vector search", "MCP tool connectivity", "Human-in-the-loop review", "Model routing", "Prompt caching", "Eval harnesses", "OpenTelemetry tracing"],
+  "languages": ["TypeScript", "Node.js", "SvelteKit", "React", "Golang", "Python"]
+}
