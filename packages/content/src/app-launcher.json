@@ -1,0 +1,32 @@
+[
+  {
+    "id": "market",
+    "label": "Market",
+    "shortLabel": "Trade",
+    "description": "Railbird-inspired trading terminal · demo data"
+  },
+  {
+    "id": "office",
+    "label": "Adventure",
+    "shortLabel": "Quest",
+    "description": "Top-down office exploration · resume zones"
+  },
+  {
+    "id": "mfe",
+    "label": "MFE Lab",
+    "shortLabel": "MFE",
+    "description": "Module Federation · Wex platform architecture"
+  },
+  {
+    "id": "orbit",
+    "label": "Orbit",
+    "shortLabel": "Resume",
+    "description": "Career timeline · parallax space scroll"
+  },
+  {
+    "id": "coach",
+    "label": "Coach",
+    "shortLabel": "Lead",
+    "description": "Player-coach leadership · sticker board"
+  }
+]

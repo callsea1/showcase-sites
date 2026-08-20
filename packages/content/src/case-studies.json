@@ -4,22 +4,36 @@
     "title": "Wex",
     "role": "Principal Engineer (L6)",
     "period": "2025–Present",
-    "summary": "Company-wide next-gen web platform with microfrontends, internal admin portal generator, and AI agent workflows for production support.",
-    "metrics": ["300+ in-person Spark demo", "Admin portals in under 10 minutes", "300+ engineers trained"],
+    "summary": "Principal Engineer L6 at a $6B-revenue fintech — company-wide next-gen web platform with microfrontends, internal admin portal generator, and AI agent workflows for production support.",
+    "metrics": ["$6B revenue company", "300+ in-person Spark demo", "Admin portals in under 10 minutes", "300+ engineers trained"],
     "tech": ["React", "Module Federation", "Kubernetes", "Helm", "Argo", "TypeScript"],
     "featured": true,
+    "effort": true,
     "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80&auto=format&fit=crop"
   },
   {
     "id": "railbird",
     "title": "Railbird (Y Combinator)",
-    "role": "Head of Engineering",
+    "role": "Head of Engineering · Startup expert",
     "period": "2022–2023",
-    "summary": "Built a regulated event prediction futures exchange. Led architecture, hiring, CFTC demonstrations, and SOC2 compliance through a $60M+ DraftKings acquisition.",
+    "summary": "Built a regulated event prediction futures exchange from zero. Led architecture, hiring, CFTC demonstrations, and SOC2 through a $60M+ DraftKings acquisition.",
     "metrics": ["$4.5M raised", "$60M+ exit to DraftKings", "CFTC demo success"],
     "tech": ["TypeScript", "SvelteKit", "Golang", "Kubernetes", "Kafka", "Terraform"],
     "featured": true,
+    "effort": true,
     "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80&auto=format&fit=crop"
+  },
+  {
+    "id": "blisser",
+    "title": "Blisser",
+    "role": "CTO / CPO · Startup expert",
+    "period": "2020–2022",
+    "summary": "Early-stage digital platform for personalized video messages supporting climate and charitable causes — built the product and engineering org from seed through launch.",
+    "metrics": ["$1M seed raised", "Pre-launch platform build", "Stockholm · global talent marketplace"],
+    "tech": ["React", "Node.js", "AWS", "Video streaming", "Mobile web"],
+    "featured": true,
+    "effort": true,
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80&auto=format&fit=crop"
   },
   {
     "id": "paro",
@@ -29,7 +43,7 @@
     "summary": "Financial marketplace overhaul with Bedrock AI architecture, vector DB pipelines, and DevOps modernization across 15+ properties.",
     "metrics": ["15+ fullstack sites", "100+ pipeline overhauls"],
     "tech": ["AWS Bedrock", "Lambda", "DynamoDB", "GraphQL", "Vector DBs"],
-    "featured": true,
+    "featured": false,
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop"
   },
   {
@@ -40,7 +54,7 @@
     "summary": "Kayak for food delivery — led AWS migration, CI/CD, and performance optimization.",
     "metrics": ["42s → 2.5s load time", "50+ high-impact projects"],
     "tech": ["AWS ECS", "Fargate", "React Native", "Redis"],
-    "featured": true,
+    "featured": false,
     "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80&auto=format&fit=crop"
   },
   {

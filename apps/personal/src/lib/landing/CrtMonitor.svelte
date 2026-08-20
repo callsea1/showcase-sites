@@ -163,8 +163,8 @@
         </div>
 
         <span class="crt-brand">SEAN.OS / SUITE 47</span>
-        <strong>EXPLORE<br />THE<br />OFFICE</strong>
-        <small>TOP-DOWN ADVENTURE / PRESS START</small>
+        <strong>PORTFOLIO<br />APPS<br />ONLINE</strong>
+        <small>5 MODULES · TAP A PILL BELOW</small>
       </div>
     </div>
 

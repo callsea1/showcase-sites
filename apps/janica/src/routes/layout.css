@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+:root {
+  --pink: #ff9398;
+  --teal: #5ecfcf;
+  --sky: #acd8e6;
+  --ink: #1e2a32;
+  --glass: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.72);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, #ffd4d6 0%, #b8ecec 45%, #acd8e6 100%);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}

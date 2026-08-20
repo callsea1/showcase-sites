@@ -6,7 +6,8 @@
   "svelte": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./styles/base.css": "./src/styles/base.css"
+    "./styles/base.css": "./src/styles/base.css",
+    "./styles/glass.css": "./src/styles/glass.css"
   },
   "peerDependencies": {
     "svelte": "^5.0.0"

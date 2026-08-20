@@ -6,9 +6,11 @@
   "scripts": {
     "dev:personal": "pnpm --filter personal dev",
     "dev:company": "pnpm --filter company dev",
+    "dev:janica": "pnpm --filter janica dev",
     "build:personal": "pnpm --filter personal build",
     "build:company": "pnpm --filter company build",
-    "build": "pnpm build:personal && pnpm build:company",
+    "build:janica": "pnpm --filter janica build",
+    "build": "pnpm build:personal && pnpm build:company && pnpm build:janica",
     "check": "pnpm -r check"
   },
   "devDependencies": {

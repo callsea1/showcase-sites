@@ -336,7 +336,7 @@
       <div class="game-overlay">
         <p class="eyebrow">3 NINJA / CLOUD DOJO OS</p>
         <h3>Wield the system.</h3>
-        <p>Collect proof points, clear the level, and unlock the engineering story.</p>
+        <p>Collect Wex platform evidence as you play — it lands inline below, not in a popup.</p>
         <button type="button" onclick={begin}>START MISSION</button>
       </div>
     {:else if gameState === 'PAUSED'}
@@ -357,15 +357,15 @@
       <div class="game-overlay">
         <p class="eyebrow">LEVEL CLEAR / +{score}</p>
         <h3>{level.name} complete.</h3>
-        <p>{remaining.size === 0 ? 'All proof points recovered.' : 'You can replay for the remaining proof points.'}</p>
+        <p>{remaining.size === 0 ? 'All evidence recovered.' : 'Replay to pick up remaining evidence.'}</p>
         <button type="button" onclick={nextLevel}>NEXT LEVEL →</button>
       </div>
     {:else if gameState === 'VICTORY'}
       <div class="game-overlay">
         <p class="eyebrow">SYSTEM MASTERED</p>
         <h3>Build what matters.</h3>
-        <p>Now inspect the systems, proof, and methods below.</p>
-        <button type="button" onclick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>VIEW THE WORK →</button>
+        <p>Now inspect the Efforts — Wex, Railbird, Blisser.</p>
+        <button type="button" onclick={() => document.getElementById('efforts')?.scrollIntoView({ behavior: 'smooth' })}>VIEW EFFORTS →</button>
       </div>
     {/if}
   </div>

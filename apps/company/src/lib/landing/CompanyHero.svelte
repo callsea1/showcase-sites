@@ -1,13 +1,13 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
-  import { featuredCaseStudies } from '@showcase/content';
+  import { effortsCaseStudies } from '@showcase/content';
 
   type Props = { children?: Snippet };
   let { children }: Props = $props();
 
   const heroImage =
     'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1400&q=80&auto=format&fit=crop';
-  const accentImages = featuredCaseStudies.slice(0, 3).map((cs) => cs.image).filter(Boolean);
+  const accentImages = effortsCaseStudies.slice(0, 3).map((cs) => cs.image).filter(Boolean);
 </script>
 
 <div class="hero-stage">

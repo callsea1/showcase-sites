@@ -121,6 +121,8 @@
     line-height: 1;
     cursor: pointer;
     opacity: 0.8;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .overlay-body :global(p) {
@@ -150,6 +152,19 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .overlay-backdrop {
+      align-items: end;
+      padding: 0;
+    }
+
+    .overlay-panel {
+      width: 100%;
+      max-height: 88vh;
+      border-radius: 1rem 1rem 0 0;
     }
   }
 </style>

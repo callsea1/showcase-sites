@@ -1,0 +1,43 @@
+name: Deploy Janica Site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/janica/**'
+      - 'packages/**'
+      - '.github/workflows/deploy-janica.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-janica
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:janica
+
+      - name: Deploy to callsea1/janicacallahan.com
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GH_PAGES_TOKEN }}
+          repository-name: callsea1/janicacallahan.com
+          branch: gh-pages
+          folder: apps/janica/build
+          clean: true
+          single-commit: true

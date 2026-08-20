@@ -1,0 +1,72 @@
+:root {
+  --glass-bg: rgba(26, 26, 26, 0.65);
+  --glass-bg-light: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(158, 203, 255, 0.35);
+  --glass-border-subtle: rgba(158, 203, 255, 0.2);
+  --glass-blur: 12px;
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: 0.75rem;
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-panel--light {
+  background: var(--glass-bg-light);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.glass-ticket {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: 0.75rem;
+  box-shadow: var(--glass-shadow);
+  padding: 0.85rem;
+}
+
+.glass-chart-frame {
+  background: rgba(13, 17, 23, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: 0.5rem;
+}
+
+.glass-pos-row {
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.glass-pos-row:hover,
+.glass-pos-row.active {
+  background: rgba(3, 4, 156, 0.35);
+  border-color: var(--glass-border);
+}
+
+.glass-btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.glass-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.glass-btn:active {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-btn {
+    transition: none;
+  }
+  .glass-btn:hover {
+    transform: none;
+  }
+}

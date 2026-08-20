@@ -64,9 +64,12 @@ export const OFFICE_CONFIG = {
   tileSize: 40,
   spawnCol: 8,
   spawnRow: 12,
-  accent: '#03049c',
-  accentGlow: '#9ecbff',
-  parkColor: '#2d6a4f'
+  accent: '#4ade80',
+  accentGlow: '#bbf7d0',
+  parkColor: '#86efac',
+  floorColor: '#4ade80',
+  wallColor: '#166534',
+  carpetColor: '#22c55e'
 };
 
 export function isSolidTile(tile: OfficeTile): boolean {

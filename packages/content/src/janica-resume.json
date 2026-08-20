@@ -1,0 +1,99 @@
+{
+  "name": "Janica Callahan",
+  "title": "Executive Assistant / Account Manager",
+  "location": "Chicago, IL",
+  "status": "Open to opportunities",
+  "summary": "Dynamic Executive Assistant with a proven track record at several medium-sized firms and a startup, excelling in complex calendar management, client and office management. Achieved significant annual savings through optimized travel planning while enhancing stakeholder communications. Adept at problem-solving and leveraging AI agents to 10x daily outputs, ensuring efficient operations and superior client service.",
+  "contact": {
+    "phone": "224-521-3534",
+    "email": "janicasogoc95@gmail.com"
+  },
+  "experience": [
+    {
+      "id": "three-ninja",
+      "role": "Executive Assistant / Accounts and Sales",
+      "org": "Three Ninja LLC",
+      "location": "Chicago, IL",
+      "period": "Jul 2024 – Present",
+      "highlights": [
+        "Managed internal and external stakeholder communications, ensuring seamless interactions.",
+        "Drove adoption of new AI project management software.",
+        "Streamlined executive communications, reducing email clutter and improving response times.",
+        "Supported successful event execution through meticulous planning and coordination.",
+        "Serviced clients on web, mobile, and digital channels."
+      ]
+    },
+    {
+      "id": "peregrine",
+      "role": "Secretary / Administrator",
+      "org": "Peregrine Analytics General Trading LLC",
+      "location": "Dubai, UAE",
+      "period": "Jul 2022 – Sep 2024",
+      "highlights": [
+        "Provided administrative support including reports, meeting minutes, and research.",
+        "Managed executive email accounts and initiated conversations with colleagues.",
+        "Proofread and edited executive documents and communications.",
+        "Monitored and maintained executive files and records.",
+        "Prepared agendas, catering, and invites for luncheons, board meetings, and appointments.",
+        "Performed data entry, generated reports, and greeted visitors with friendly service."
+      ]
+    },
+    {
+      "id": "yay",
+      "role": "Office Administrator / HR",
+      "org": "YAY Landscaping LLC",
+      "location": "Dubai, UAE",
+      "period": "Apr 2021 – Jun 2022",
+      "highlights": [
+        "Drafted, proofread, and edited confidential correspondence and documents.",
+        "Organized meetings, took minutes, and assisted with new-hire onboarding.",
+        "Developed and maintained internal and external company websites.",
+        "Managed office supplies, quotations, and business project support.",
+        "Handled VAT filing, accounts receivable, payroll, and upper-management travel."
+      ]
+    }
+  ],
+  "skills": {
+    "ai": [
+      "ChatGPT & GPT-4 Integration",
+      "Gemini & Google AI Model Support",
+      "Microsoft Copilot (Office 365)",
+      "Voice Assistant Integration",
+      "RPA Task Support",
+      "Custom AI Workflow Development"
+    ],
+    "operations": [
+      "Complex Calendar Management & Scheduling",
+      "International & Domestic Travel Logistics",
+      "Meeting & Event Coordination",
+      "High-Volume Correspondence Management",
+      "Project Support",
+      "Data Analysis & Reporting",
+      "CRM Software Support"
+    ],
+    "admin": [
+      "Secure Document Management & Record Keeping",
+      "Executive Support",
+      "Customer Service",
+      "Strategic Planning",
+      "Payroll",
+      "Staff Management",
+      "Compensation & Benefits",
+      "Human Resources Management (HRM)"
+    ]
+  },
+  "education": {
+    "degree": "Bachelor of Science in Hotel and Restaurant Management",
+    "school": "Bukidnon State University",
+    "year": 2018
+  },
+  "languages": [
+    { "name": "Cebuano", "level": "Native" },
+    { "name": "English", "level": "Professional" }
+  ],
+  "locations": [
+    { "city": "Chicago", "lat": 41.88, "lng": -87.63, "label": "Current" },
+    { "city": "Dubai", "lat": 25.2, "lng": 55.27, "label": "2021–2024" },
+    { "city": "Bukidnon", "lat": 8.05, "lng": 124.92, "label": "Education" }
+  ]
+}

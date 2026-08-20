@@ -203,21 +203,21 @@
 
   function drawTile(context: CanvasRenderingContext2D, tile: number, x: number, y: number) {
     if (tile === 1) {
-      context.fillStyle = '#1c2333';
+      context.fillStyle = '#166534';
       context.fillRect(x, y, TILE, TILE);
-      context.strokeStyle = 'rgba(158, 203, 255, 0.15)';
+      context.strokeStyle = 'rgba(74, 222, 128, 0.25)';
       context.strokeRect(x + 2, y + 2, TILE - 4, TILE - 4);
       return;
     }
     if (tile === 4) {
       const sky = context.createLinearGradient(x, y, x, y + TILE);
-      sky.addColorStop(0, '#234d66');
-      sky.addColorStop(0.55, '#4a90a4');
-      sky.addColorStop(0.72, '#7ec8a3');
+      sky.addColorStop(0, '#7dd3fc');
+      sky.addColorStop(0.5, '#38bdf8');
+      sky.addColorStop(0.75, '#86efac');
       sky.addColorStop(1, parkColor);
       context.fillStyle = sky;
       context.fillRect(x, y, TILE, TILE);
-      context.fillStyle = 'rgba(255,255,255,0.08)';
+      context.fillStyle = 'rgba(255,255,255,0.15)';
       for (let i = 0; i < 3; i++) {
         context.fillRect(x + 6 + i * 11, y + 8 + (i % 2) * 4, 8, 2);
       }
@@ -227,24 +227,24 @@
       return;
     }
     if (tile === 2) {
-      context.fillStyle = '#2a3148';
+      context.fillStyle = '#854d0e';
       context.fillRect(x, y, TILE, TILE);
-      context.fillStyle = '#3d4a6a';
+      context.fillStyle = '#a16207';
       context.fillRect(x + 4, y + 8, TILE - 8, TILE - 14);
-      context.fillStyle = accent;
+      context.fillStyle = '#fde047';
       context.fillRect(x + 4, y + 8, TILE - 8, 3);
       return;
     }
     if (tile === 3) {
-      context.fillStyle = '#222a3d';
+      context.fillStyle = '#15803d';
       context.fillRect(x, y, TILE, TILE);
-      context.fillStyle = 'rgba(3, 4, 156, 0.35)';
+      context.fillStyle = 'rgba(74, 222, 128, 0.4)';
       context.fillRect(x + 3, y + 3, TILE - 6, TILE - 6);
       return;
     }
-    context.fillStyle = '#151b28';
+    context.fillStyle = '#4ade80';
     context.fillRect(x, y, TILE, TILE);
-    context.fillStyle = 'rgba(158, 203, 255, 0.04)';
+    context.fillStyle = 'rgba(34, 197, 94, 0.3)';
     context.fillRect(x + TILE / 2 - 1, y, 2, TILE);
     context.fillRect(x, y + TILE / 2 - 1, TILE, 2);
   }

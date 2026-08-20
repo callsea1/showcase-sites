@@ -1,8 +1,9 @@
 {
   "name": "Sean P. Callahan",
   "title": "VP Eng / Principal Engineer",
-  "tagline": "Principal engineer building company-wide platforms, regulated fintech, and AI-native systems — from YC startups to Fortune-scale cloud. Illinois-built. AI as force multiplier.",
+  "tagline": "Principal engineer building company-wide platforms, regulated fintech, and AI-native systems — player-coach from YC startups to Fortune-scale cloud.",
   "location": "Chicago, Illinois",
+  "status": "Engaged, but open to a chat",
   "contact": {
     "email": "sean@3ninjallc.com",
     "phone": "312.351.5323",
@@ -16,9 +17,9 @@
   "highlights": [
     "Principal Engineer L6 at Wex — company-wide MFE platform, AI agent workflows, 300+ Spark demo",
     "Railbird (Y Combinator) Head of Engineering — $60M+ exit to DraftKings",
-    "Staff Engineer at Paro.io — Bedrock AI architecture, vector pipelines, DevOps modernization",
-    "Taught Web 2.0 at Northwestern University",
-    "300+ engineers trained across in-person and virtual sessions"
+    "Blisser CTO / CPO — product and engineering from seed through launch",
+    "1,400+ engineers trained across in-person and virtual sessions",
+    "Player-coach leadership — AT&T Key Contributor, Lego League coach, startup hiring systems"
   ],
   "skills": [
     "Microfrontends / Module Federation",
@@ -27,5 +28,40 @@
     "TypeScript / Node / React / SvelteKit",
     "Design Systems / WCAG 2.2",
     "Terraform / GitHub Actions"
+  ],
+  "leadership": [
+    {
+      "id": "wex-coach",
+      "title": "Platform Player-Coach",
+      "org": "Wex",
+      "detail": "Hands-on Principal L6 leading MFE platform while mentoring 300+ engineers through Spark demos and portal generation."
+    },
+    {
+      "id": "att-solaris",
+      "title": "Enterprise Systems",
+      "org": "AT&T · Solaris",
+      "detail": "Key Contributor Award — large-scale telecom infrastructure, reliability engineering, and cross-team leadership."
+    },
+    {
+      "id": "startup-hire",
+      "title": "Startup Leadership",
+      "org": "Railbird · Blisser · Cameo",
+      "detail": "Built engineering orgs from seed through Series A/B — hiring bar, standards, SOC2, and CFTC-regulated architecture."
+    },
+    {
+      "id": "lego-coach",
+      "title": "Coach Who Earns Stickers",
+      "org": "Breakthrough Robotics",
+      "detail": "Lego League coach — took an unranked team to 3rd place. Stickers earned, not given."
+    }
+  ],
+  "timeline": [
+    { "year": "2025–", "role": "Principal Engineer L6", "org": "Wex", "highlight": "Company-wide MFE platform · AI agents · $6B revenue fintech" },
+    { "year": "2024", "role": "Staff Engineer", "org": "Paro.io", "highlight": "Bedrock AI · 15+ site migrations · vector pipelines" },
+    { "year": "2022–23", "role": "Head of Engineering", "org": "Railbird (YC)", "highlight": "$60M+ exit · CFTC exchange · SOC2" },
+    { "year": "2021–22", "role": "Head of Engineering", "org": "qChange", "highlight": "Greenfield ML platform · SOC2 audit" },
+    { "year": "2019–21", "role": "Head of Engineering", "org": "FoodBoss", "highlight": "AWS migration · 42s→2.5s performance" },
+    { "year": "2018–19", "role": "Senior Engineer", "org": "Cameo", "highlight": "$3.2M seed · $12.5M Series A era" },
+    { "year": "Earlier", "role": "Engineering Lead", "org": "AT&T · Solaris", "highlight": "Key Contributor · enterprise scale" }
   ]
 }
