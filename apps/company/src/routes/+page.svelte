@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { resume, stats, effortsCaseStudies, caseStudies } from '@showcase/content';
   import { frameworks, frameworkDisclaimer } from '@showcase/ai-proof';
-  import { FrameworkViewer } from '@showcase/ui';
+  import { FrameworkViewer, BrandMark } from '@showcase/ui';
   import NinjaGame from '$lib/game/NinjaGame.svelte';
   import CompanyHero from '$lib/landing/CompanyHero.svelte';
   import type { GameCollectible } from '@showcase/engine-game';
@@ -50,6 +50,7 @@
 {#if loading}
   <div class="screen loader">
     <div class="boot">
+      <BrandMark size={52} class="boot-logo" />
       <span>3NINJA / BOOT</span>
       <span class:visible={bootLine > 0}>[01] Wex platform · L6</span>
       <span class:visible={bootLine > 1}>[02] MFE · AI · regulated fintech</span>
@@ -59,7 +60,10 @@
 {:else}
   <div class="site">
     <header class="top">
-      <strong>3 Ninja LLC</strong>
+      <a class="brand" href="/">
+        <BrandMark size={30} />
+        <strong>3 Ninja LLC</strong>
+      </a>
       <nav>
         <a href="#wex">Wex</a>
         <a href="#efforts">Efforts</a>
@@ -214,6 +218,26 @@
   .boot {
     display: grid;
     gap: 0.6rem;
+    justify-items: center;
+    text-align: center;
+  }
+
+  :global(.boot-logo) {
+    margin-bottom: 0.35rem;
+    filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.15));
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .brand strong {
+    font-size: 0.95rem;
+    letter-spacing: -0.02em;
   }
 
   .boot span:not(:first-child) {

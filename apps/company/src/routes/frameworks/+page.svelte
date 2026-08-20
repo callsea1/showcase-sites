@@ -1,6 +1,6 @@
 <script lang="ts">
   import { frameworks, frameworkDisclaimer } from '@showcase/ai-proof';
-  import { FrameworkViewer } from '@showcase/ui';
+  import { FrameworkViewer, BrandMark } from '@showcase/ui';
 </script>
 
 <svelte:head>
@@ -8,7 +8,13 @@
 </svelte:head>
 
 <main class="page">
-  <a href="/">← Dojo</a>
+  <header class="page-head">
+    <a class="brand" href="/">
+      <BrandMark size={28} />
+      <span>3 Ninja LLC</span>
+    </a>
+    <a href="/">← Dojo</a>
+  </header>
   <h1>Representative Frameworks</h1>
   <p>{frameworkDisclaimer}</p>
   {#each frameworks as fw}
@@ -26,6 +32,23 @@
     margin: 0 auto;
     padding: 2rem 1.25rem 4rem;
     font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  .page-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
   }
 
   article {

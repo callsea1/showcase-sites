@@ -7,7 +7,8 @@
   "exports": {
     ".": "./src/index.ts",
     "./styles/base.css": "./src/styles/base.css",
-    "./styles/glass.css": "./src/styles/glass.css"
+    "./styles/glass.css": "./src/styles/glass.css",
+    "./assets/3ninja-lightsphere.png": "./src/assets/3ninja-lightsphere.png"
   },
   "peerDependencies": {
     "svelte": "^5.0.0"
