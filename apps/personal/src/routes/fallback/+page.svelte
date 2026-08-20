@@ -13,7 +13,10 @@
     <p class="eyebrow">Accessible portfolio mode</p>
     <h1>{resume.name}</h1>
     <p>{resume.tagline}</p>
-    <a href="/">← Back to office game</a>
+    <nav class="fallback-nav">
+      <a href="/">← Back to office game</a>
+      <a href="https://www.3ninjallc.com" target="_blank" rel="noreferrer">3 Ninja LLC →</a>
+    </nav>
   </header>
 
   <section>
@@ -103,5 +106,12 @@
 
   a {
     color: #9ecbff;
+  }
+
+  .fallback-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-top: 0.75rem;
   }
 </style>

@@ -68,7 +68,13 @@
   <div class="page">
     <header class="terminal-nav">
       <span>SPC / CHICAGO</span>
-      <span>STATUS: {statusText.toUpperCase()} <i class="status-dot"></i></span>
+      <div class="nav-right">
+        <a class="company-link" href="https://www.3ninjallc.com" target="_blank" rel="noreferrer">
+          <span class="company-link__label">Company</span>
+          <span class="company-link__name">3 Ninja LLC</span>
+        </a>
+        <span class="status">STATUS: {statusText.toUpperCase()} <i class="status-dot"></i></span>
+      </div>
     </header>
 
     <section class="hero">
@@ -113,7 +119,7 @@
     <footer class="footer">
       <nav>
         <a href="/frameworks">Frameworks</a>
-        <a href="https://3ninjallc.com" target="_blank" rel="noreferrer">3 Ninja LLC</a>
+        <a href="https://www.3ninjallc.com" target="_blank" rel="noreferrer">3 Ninja LLC</a>
         <a href={resume.contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="mailto:{resume.contact.email}">Contact</a>
       </nav>
@@ -177,12 +183,53 @@
   .terminal-nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem;
     font: 0.68rem 'IBM Plex Mono', monospace;
     letter-spacing: 0.12em;
     opacity: 0.85;
     margin-bottom: 1.5rem;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+  }
+
+  .company-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid rgba(158, 203, 255, 0.35);
+    border-radius: 999px;
+    background: rgba(3, 4, 156, 0.25);
+    color: #9ecbff;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .company-link:hover {
+    border-color: rgba(158, 203, 255, 0.65);
+    background: rgba(3, 4, 156, 0.45);
+  }
+
+  .company-link__label {
+    opacity: 0.65;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+  }
+
+  .company-link__name {
+    font-weight: 600;
+  }
+
+  .status {
+    white-space: nowrap;
   }
 
   .status-dot {

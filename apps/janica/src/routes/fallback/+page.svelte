@@ -16,7 +16,10 @@
     <p class="eyebrow">Accessible portfolio mode</p>
     <h1>{janicaResume.name}</h1>
     <p>{janicaResume.title} · {janicaResume.location}</p>
-    <a href="/">← Back to interactive site</a>
+    <nav class="fallback-nav">
+      <a href="/">← Back to interactive site</a>
+      <a href="https://www.3ninjallc.com" target="_blank" rel="noreferrer">3 Ninja LLC →</a>
+    </nav>
   </header>
 
   <GlassPanel id="about">
@@ -79,6 +82,12 @@
 
   header a {
     color: inherit;
+  }
+
+  .fallback-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
   }
 
   .experience {
