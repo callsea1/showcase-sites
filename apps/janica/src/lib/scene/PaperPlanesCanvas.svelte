@@ -7,17 +7,10 @@
     locations: JanicaLocation[];
     onReady?: () => void;
     onWebGlFailed?: () => void;
-    launchSignal?: number;
     scrollProgress?: number;
   };
 
-  let {
-    locations,
-    onReady,
-    onWebGlFailed,
-    launchSignal = 0,
-    scrollProgress = 0
-  }: Props = $props();
+  let { locations, onReady, onWebGlFailed, scrollProgress = 0 }: Props = $props();
 
   let canvas: HTMLCanvasElement;
   let loading = $state(true);
@@ -58,10 +51,6 @@
   $effect(() => {
     scene?.setScrollProgress(scrollProgress);
   });
-
-  $effect(() => {
-    if (launchSignal > 0) scene?.launchPlane();
-  });
 </script>
 
 <div class="canvas-wrap" aria-hidden="true">
@@ -76,7 +65,7 @@
     position: fixed;
     inset: 0;
     z-index: 0;
-    pointer-events: auto;
+    pointer-events: none;
     opacity: 1;
   }
 

@@ -10,7 +10,6 @@
   import PaperPlanesCanvas from '$lib/scene/PaperPlanesCanvas.svelte';
 
   let scrollProgress = $state(0);
-  let launchSignal = $state(0);
   let activeExperience = $state(0);
   let webglEnabled = $state(true);
 
@@ -55,10 +54,6 @@
     };
   });
 
-  function launchPlane() {
-    launchSignal += 1;
-  }
-
   function handleWebGlFailed() {
     webglEnabled = false;
   }
@@ -76,7 +71,6 @@
   <PaperPlanesCanvas
     locations={janicaResume.locations}
     {scrollProgress}
-    {launchSignal}
     onWebGlFailed={handleWebGlFailed}
   />
 {/if}
@@ -94,7 +88,7 @@
   </header>
 
   <main>
-    <HeroPanel resume={janicaResume} onLaunch={launchPlane} />
+    <HeroPanel resume={janicaResume} />
 
     <GlassPanel id="about" class="about-panel">
       <h2>About</h2>

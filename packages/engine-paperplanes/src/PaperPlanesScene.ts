@@ -1,8 +1,8 @@
 import * as THREE from 'three';
 import { createGlobe, type GlobeLocation } from './Globe.js';
-import { createPlaneLauncher, type PlaneLauncher } from './PlaneLauncher.js';
-import { createScrollSync, type ScrollSyncHandle } from './ScrollSync.js';
+import { createScrollSync } from './ScrollSync.js';
 import { createSkyGradient, updateSkyGradient } from './SkyGradient.js';
+import { createSmileyFloater, type SmileyFloater } from './SmileyFloater.js';
 
 export type PaperPlanesSceneOptions = {
   canvas: HTMLCanvasElement;
@@ -13,7 +13,6 @@ export type PaperPlanesSceneOptions = {
 
 export type PaperPlanesSceneHandle = {
   setScrollProgress: (progress: number) => void;
-  launchPlane: () => void;
   resize: () => void;
   dispose: () => void;
 };
@@ -54,9 +53,7 @@ export function createPaperPlanesScene(options: PaperPlanesSceneOptions): PaperP
   scene.add(globe.group);
 
   const scrollSync = createScrollSync(locations.length);
-
-  const launcherLocations = locations.map((l) => ({ city: l.city, label: l.label }));
-  let launcher: PlaneLauncher | null = null;
+  const smileys = createSmileyFloater({ scene, isMobile });
 
   let animationId = 0;
   let elapsed = 0;
@@ -80,6 +77,7 @@ export function createPaperPlanesScene(options: PaperPlanesSceneOptions): PaperP
 
     updateSkyGradient(sky, elapsed);
     globe.update(elapsed);
+    smileys.update(elapsed);
 
     const activeIndex = scrollSync.getActiveLocationIndex();
     globe.setActiveIndex(activeIndex);
@@ -89,39 +87,31 @@ export function createPaperPlanesScene(options: PaperPlanesSceneOptions): PaperP
     camera.position.x = THREE.MathUtils.lerp(camera.position.x, (drift - 0.5) * 1.2, 0.03);
     camera.lookAt(0, 0, 0);
 
-    launcher?.update();
     renderer.render(scene, camera);
   }
 
   resize();
-  launcher = createPlaneLauncher({
-    scene,
-    camera,
-    domElement: canvas,
-    locations: launcherLocations,
-    isMobile
-  });
-
   animationId = requestAnimationFrame(animate);
   onReady?.();
 
+  for (let i = 0; i < (isMobile ? 2 : 3); i++) {
+    smileys.spawn();
+  }
+
   incomingTimer = setInterval(() => {
-    launcher?.spawnIncoming();
-  }, isMobile ? 6000 : 4500);
+    smileys.spawn();
+  }, isMobile ? 5500 : 4000);
 
   return {
     setScrollProgress(progress: number) {
       scrollSync.setProgress(progress);
-    },
-    launchPlane() {
-      launcher?.launch();
     },
     resize,
     dispose() {
       disposed = true;
       cancelAnimationFrame(animationId);
       if (incomingTimer) clearInterval(incomingTimer);
-      launcher?.dispose();
+      smileys.dispose();
       renderer.dispose();
       sky.geometry.dispose();
       (sky.material as THREE.Material).dispose();
@@ -129,4 +119,4 @@ export function createPaperPlanesScene(options: PaperPlanesSceneOptions): PaperP
   };
 }
 
-export type { GlobeLocation, ScrollSyncHandle, PlaneLauncher };
+export type { GlobeLocation };

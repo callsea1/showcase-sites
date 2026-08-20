@@ -4,10 +4,9 @@
 
   type Props = {
     resume: JanicaResume;
-    onLaunch?: () => void;
   };
 
-  let { resume, onLaunch }: Props = $props();
+  let { resume }: Props = $props();
 </script>
 
 <GlassPanel id="hero" class="hero-panel">
@@ -20,10 +19,8 @@
   <p class="title">{resume.title}</p>
   <p class="location">{resume.location}</p>
   <div class="actions">
-    <button type="button" class="primary" onclick={() => onLaunch?.()}>Send a plane</button>
-    <a href="#contact" class="secondary">Get in touch</a>
+    <a href="#contact" class="primary">Get in touch</a>
   </div>
-  <p class="hint">Tap the sky or click to launch a paper plane</p>
 </GlassPanel>
 
 <style>
@@ -83,11 +80,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-bottom: 0.75rem;
   }
 
-  .primary,
-  .secondary {
+  .primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -95,24 +90,7 @@
     border-radius: 999px;
     font-weight: 600;
     text-decoration: none;
-    border: none;
-    cursor: pointer;
-    font: inherit;
-  }
-
-  .primary {
     background: var(--ink);
     color: white;
-  }
-
-  .secondary {
-    background: rgba(255, 255, 255, 0.55);
-    border: 1px solid rgba(30, 42, 50, 0.12);
-  }
-
-  .hint {
-    font-size: 0.82rem;
-    color: rgba(30, 42, 50, 0.55);
-    margin: 0;
   }
 </style>
