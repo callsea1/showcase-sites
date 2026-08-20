@@ -1,1 +1,24 @@
-{"domain":"seanpcallahan.net","status":"pending_auth","note":"Run namecheap auth login from repo root"}
+[
+  {
+    "hostId": "390575349",
+    "name": "@",
+    "type": "URL",
+    "address": "https://3ninjallc.com",
+    "mxPref": 10,
+    "ttl": 1799,
+    "isActive": true,
+    "isDDNSEnabled": false
+  },
+  {
+    "hostId": "360203869",
+    "name": "www",
+    "type": "URL",
+    "address": "https://3ninjallc.com",
+    "mxPref": 10,
+    "ttl": 1799,
+    "isActive": true,
+    "isDDNSEnabled": false
+  }
+]
+
+Total: 2 record(s)

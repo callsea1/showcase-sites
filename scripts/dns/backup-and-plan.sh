@@ -3,7 +3,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
-DOMAINS=("seanpcallahan.net" "3ninjallc.com")
+DOMAINS=("seanpcallahan.net" "3ninjallc.com" "janicacallahan.com")
 
 echo "=== DNS baseline backup ==="
 cd "$ROOT"

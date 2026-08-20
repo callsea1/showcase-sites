@@ -1,0 +1,22 @@
+[
+  {
+    "hostId": "530234298",
+    "name": "www",
+    "type": "CNAME",
+    "address": "parkingpage.namecheap.com.",
+    "mxPref": 10,
+    "ttl": 1800,
+    "isActive": true,
+    "isDDNSEnabled": false
+  },
+  {
+    "hostId": "530234297",
+    "name": "@",
+    "type": "URL",
+    "address": "http://www.janicacallahan.com/",
+    "mxPref": 10,
+    "ttl": 1800,
+    "isActive": true,
+    "isDDNSEnabled": false
+  }
+]

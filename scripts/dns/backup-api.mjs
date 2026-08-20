@@ -6,7 +6,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DOMAINS = ['seanpcallahan.net', '3ninjallc.com'];
+const DOMAINS = ['seanpcallahan.net', '3ninjallc.com', 'janicacallahan.com'];
 const API_URL = 'https://api.namecheap.com/xml.response';
 
 function loadConfig() {

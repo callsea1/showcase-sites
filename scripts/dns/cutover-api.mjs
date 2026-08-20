@@ -10,7 +10,12 @@ import { join } from 'node:path';
 
 const GITHUB_A = ['185.199.108.153', '185.199.109.153', '185.199.110.153', '185.199.111.153'];
 const GITHUB_WWW = 'callsea1.github.io';
-const DOMAINS = ['seanpcallahan.net', '3ninjallc.com'];
+const DOMAINS = ['seanpcallahan.net', '3ninjallc.com', 'janicacallahan.com'];
+/** Namecheap Private Email — restored if getHosts omits MX rows */
+const DEFAULT_MX = [
+  { name: '@', type: 'MX', address: 'mx1.privateemail.com', mxPref: '10', ttl: '1800' },
+  { name: '@', type: 'MX', address: 'mx2.privateemail.com', mxPref: '10', ttl: '1800' }
+];
 const API_URL = 'https://api.namecheap.com/xml.response';
 
 function loadConfig() {
@@ -86,13 +91,19 @@ function splitDomain(domain) {
 }
 
 function cutoverHosts(hosts) {
+  const mxFromApi = hosts.filter((h) => h.type.toUpperCase() === 'MX');
+  const mxRecords = mxFromApi.length > 0 ? mxFromApi : DEFAULT_MX;
+
   const kept = hosts.filter((h) => {
     const t = h.type.toUpperCase();
     if (['URL', 'URL301', 'FRAME'].includes(t)) return false;
     if (t === 'A' && h.name === '@') return false;
     if (t === 'CNAME' && h.name === 'www') return false;
+    if (t === 'MX') return false;
     return true;
   });
+
+  kept.push(...mxRecords);
 
   for (const ip of GITHUB_A) {
     kept.push({ name: '@', type: 'A', address: ip, mxPref: '10', ttl: '1800' });

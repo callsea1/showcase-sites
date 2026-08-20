@@ -1,1 +1,54 @@
-{"domain":"3ninjallc.com","status":"pending_auth","note":"Run namecheap auth login from repo root"}
+[
+  {
+    "hostId": "465974556",
+    "name": "@",
+    "type": "A",
+    "address": "199.60.103.110",
+    "mxPref": 10,
+    "ttl": 1799,
+    "isActive": true,
+    "isDDNSEnabled": false
+  },
+  {
+    "hostId": "465975083",
+    "name": "@",
+    "type": "A",
+    "address": "199.60.103.10",
+    "mxPref": 10,
+    "ttl": 1799,
+    "isActive": true,
+    "isDDNSEnabled": false
+  },
+  {
+    "hostId": "24586700",
+    "name": "www",
+    "type": "CNAME",
+    "address": "242169209.group0.sites.hscoscdn-na2.net.",
+    "mxPref": 10,
+    "ttl": 1799,
+    "isActive": true,
+    "isDDNSEnabled": false
+  },
+  {
+    "hostId": "465974568",
+    "name": "_cf-custom-hostname",
+    "type": "TXT",
+    "address": "29c1f12e-975a-42a6-94f2-905deee8b365",
+    "mxPref": 10,
+    "ttl": 1799,
+    "isActive": true,
+    "isDDNSEnabled": false
+  },
+  {
+    "hostId": "465974546",
+    "name": "_cf-custom-hostname.www",
+    "type": "TXT",
+    "address": "dd0028e5-fe2f-436b-bbab-4af7d7e4af3b",
+    "mxPref": 10,
+    "ttl": 1799,
+    "isActive": true,
+    "isDDNSEnabled": false
+  }
+]
+
+Total: 5 record(s)

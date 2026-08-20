@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DOMAINS=("seanpcallahan.net" "3ninjallc.com")
+DOMAINS=("seanpcallahan.net" "3ninjallc.com" "janicacallahan.com")
 
 for d in "${DOMAINS[@]}"; do
   echo "=== $d ==="

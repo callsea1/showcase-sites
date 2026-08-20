@@ -7,7 +7,7 @@ cd "$ROOT"
 
 GITHUB_A=("185.199.108.153" "185.199.109.153" "185.199.110.153" "185.199.111.153")
 GITHUB_WWW="callsea1.github.io"
-DOMAINS=("seanpcallahan.net" "3ninjallc.com")
+DOMAINS=("seanpcallahan.net" "3ninjallc.com" "janicacallahan.com")
 
 echo "=== Pre-cutover MX snapshot ==="
 for d in "${DOMAINS[@]}"; do
@@ -23,26 +23,26 @@ cutover_domain() {
   echo "=== Updating $domain ==="
 
   while IFS= read -r line; do
-    id=$(echo "$line" | awk -F'|' '{print $2}' | tr -d ' ')
-    type=$(echo "$line" | awk -F'|' '{print $3}' | tr -d ' ')
-    name=$(echo "$line" | awk -F'|' '{print $4}' | tr -d ' ')
-    [[ -z "$id" || "$id" == "ID" ]] && continue
+    id=$(echo "$line" | jq -r '.hostId // empty')
+    type=$(echo "$line" | jq -r '.type // empty')
+    name=$(echo "$line" | jq -r '.name // empty')
+    [[ -z "$id" ]] && continue
     if [[ "$type" == "URL" || "$type" == "FRAME" || "$type" == "URL301" ]]; then
       echo "  Removing $type $name ($id)"
       namecheap dns rm "$domain" "$id" --force
     fi
-  done < <(namecheap dns list "$domain" | grep '^|' || true)
+  done < <(namecheap dns list "$domain" --json 2>/dev/null | jq -c '.[]' 2>/dev/null || true)
 
   local a_ids=()
   while IFS= read -r line; do
-    id=$(echo "$line" | awk -F'|' '{print $2}' | tr -d ' ')
-    type=$(echo "$line" | awk -F'|' '{print $3}' | tr -d ' ')
-    name=$(echo "$line" | awk -F'|' '{print $4}' | tr -d ' ')
-    [[ -z "$id" || "$id" == "ID" ]] && continue
+    id=$(echo "$line" | jq -r '.hostId // empty')
+    type=$(echo "$line" | jq -r '.type // empty')
+    name=$(echo "$line" | jq -r '.name // empty')
+    [[ -z "$id" ]] && continue
     if [[ "$type" == "A" && "$name" == "@" ]]; then
       a_ids+=("$id")
     fi
-  done < <(namecheap dns list "$domain" | grep '^|' || true)
+  done < <(namecheap dns list "$domain" --json 2>/dev/null | jq -c '.[]' 2>/dev/null || true)
 
   local idx=0
   for ip in "${GITHUB_A[@]}"; do
@@ -58,14 +58,14 @@ cutover_domain() {
 
   local www_id=""
   while IFS= read -r line; do
-    id=$(echo "$line" | awk -F'|' '{print $2}' | tr -d ' ')
-    type=$(echo "$line" | awk -F'|' '{print $3}' | tr -d ' ')
-    name=$(echo "$line" | awk -F'|' '{print $4}' | tr -d ' ')
-    [[ -z "$id" || "$id" == "ID" ]] && continue
+    id=$(echo "$line" | jq -r '.hostId // empty')
+    type=$(echo "$line" | jq -r '.type // empty')
+    name=$(echo "$line" | jq -r '.name // empty')
+    [[ -z "$id" ]] && continue
     if [[ "$type" == "CNAME" && "$name" == "www" ]]; then
       www_id=$id
     fi
-  done < <(namecheap dns list "$domain" | grep '^|' || true)
+  done < <(namecheap dns list "$domain" --json 2>/dev/null | jq -c '.[]' 2>/dev/null || true)
 
   if [[ -n "$www_id" ]]; then
     echo "  Setting CNAME www -> $GITHUB_WWW ($www_id)"
