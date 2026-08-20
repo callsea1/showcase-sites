@@ -18,7 +18,6 @@
     <p>{janicaResume.title} · {janicaResume.location}</p>
     <nav class="fallback-nav">
       <a href="/">← Back to interactive site</a>
-      <a href="https://www.3ninjallc.com" target="_blank" rel="noreferrer">3 Ninja LLC →</a>
     </nav>
   </header>
 
@@ -49,6 +48,14 @@
   </GlassPanel>
 
   <ContactPanel resume={janicaResume} />
+
+  <footer class="fallback-footer">
+    <p>
+      © {new Date().getFullYear()} {janicaResume.name}
+      <span class="sep" aria-hidden="true">·</span>
+      <a href="https://www.3ninjallc.com" target="_blank" rel="noreferrer">3 Ninja LLC</a>
+    </p>
+  </footer>
 </main>
 
 <style>
@@ -88,6 +95,30 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem 1.5rem;
+  }
+
+  .fallback-footer {
+    text-align: center;
+    font-size: 0.78rem;
+    color: rgba(30, 42, 50, 0.5);
+  }
+
+  .fallback-footer p {
+    margin: 0;
+  }
+
+  .fallback-footer .sep {
+    margin: 0 0.35rem;
+    opacity: 0.45;
+  }
+
+  .fallback-footer a {
+    color: rgba(30, 42, 50, 0.62);
+    text-decoration: none;
+  }
+
+  .fallback-footer a:hover {
+    color: rgba(30, 42, 50, 0.9);
   }
 
   .experience {

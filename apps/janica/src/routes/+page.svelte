@@ -89,7 +89,6 @@
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
-      <a class="company-link" href="https://www.3ninjallc.com" target="_blank" rel="noreferrer">3 Ninja LLC</a>
       <a href="/fallback">Accessible</a>
     </nav>
   </header>
@@ -140,8 +139,11 @@
   </main>
 
   <footer>
-    <a class="footer-company" href="https://www.3ninjallc.com" target="_blank" rel="noreferrer">3 Ninja LLC</a>
-    <p>© {new Date().getFullYear()} {janicaResume.name}</p>
+    <p>
+      © {new Date().getFullYear()} {janicaResume.name}
+      <span class="sep" aria-hidden="true">·</span>
+      <a class="footer-company" href="https://www.3ninjallc.com" target="_blank" rel="noreferrer">3 Ninja LLC</a>
+    </p>
   </footer>
 </div>
 
@@ -196,21 +198,6 @@
 
   nav a:hover {
     opacity: 1;
-  }
-
-  nav .company-link {
-    padding: 0.3rem 0.75rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.55);
-    border: 1px solid rgba(30, 42, 50, 0.1);
-    font-weight: 600;
-    opacity: 1;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  nav .company-link:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 14px rgba(30, 42, 50, 0.08);
   }
 
   main {
@@ -282,21 +269,27 @@
   footer {
     margin-top: 2rem;
     text-align: center;
-    font-size: 0.82rem;
-    color: rgba(30, 42, 50, 0.55);
+    font-size: 0.78rem;
+    color: rgba(30, 42, 50, 0.5);
     pointer-events: auto;
-    display: grid;
-    gap: 0.5rem;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  .sep {
+    margin: 0 0.35rem;
+    opacity: 0.45;
   }
 
   .footer-company {
-    color: rgba(30, 42, 50, 0.85);
-    font-weight: 600;
+    color: rgba(30, 42, 50, 0.62);
     text-decoration: none;
-    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
   }
 
   .footer-company:hover {
-    text-decoration: underline;
+    color: rgba(30, 42, 50, 0.9);
   }
 </style>

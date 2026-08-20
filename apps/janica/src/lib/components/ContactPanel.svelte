@@ -15,10 +15,6 @@
   <div class="links">
     <a href="mailto:{resume.contact.email}">{resume.contact.email}</a>
     <a href="tel:{resume.contact.phone.replace(/[^0-9+]/g, '')}">{resume.contact.phone}</a>
-    <a href="https://www.3ninjallc.com" target="_blank" rel="noreferrer">
-      <span class="link-kicker">Company site</span>
-      Three Ninja LLC →
-    </a>
   </div>
 </GlassPanel>
 
@@ -39,8 +35,6 @@
   }
 
   .links a {
-    display: grid;
-    gap: 0.15rem;
     font-weight: 600;
     text-decoration: none;
     padding: 0.75rem 1rem;
@@ -48,14 +42,6 @@
     background: rgba(255, 255, 255, 0.55);
     border: 1px solid rgba(30, 42, 50, 0.08);
     transition: transform 0.2s ease;
-  }
-
-  .link-kicker {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.55;
   }
 
   .links a:hover {
